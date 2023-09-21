@@ -1,0 +1,396 @@
+/* リセットCSS */
+* , ::before , ::after {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img{
+	max-width:100%;
+	vertical-align: bottom;
+}
+[id^="anchor_"]{
+}
+
+@media screen and (min-width:769px){
+  /* PC 769px以上 */
+  .u-pc {
+		display: contents;
+	}
+	.u-sp {
+		display: none;
+	}
+  html{
+    font-size: 16px;
+  }
+}
+@media screen and (max-width:768px){
+  /* タブレット 768px以下 */
+  .u-pc {
+		display: none;
+	}
+	.u-sp {
+		display: block;
+	}
+  html{
+    font-size: 2.3vw;
+  }
+}
+@media screen and  (max-width:599px){
+  /* スマートフォン 599px以下 */
+  .u-pc {
+		display: none;
+	}
+	.u-sp {
+		display: block;
+	}
+  html{
+    font-size: 3vw;
+  }
+}
+@media screen and  (max-width:414px){
+  /* スマートフォン 414px以下 */
+  .u-pc {
+		display: none;
+	}
+	.u-sp {
+		display: block;
+	}
+  html{
+    font-size: 4vw;
+  }
+}
+
+html {
+  font-family: '游ゴシック', 'Yu Gothic','游ゴシック体', 'YuGothic',sans-serif;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1rem;
+}
+
+
+
+/* ________________ */
+.parallax {
+  align-items: center;
+  /*display: flex;*/
+  height: 100%;
+  justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+    -webkit-filter: drop-shadow(0 10px 30px rgba(0, 0, 0, .7));
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, .7));
+}
+
+.area-1 {
+  background-color: #e0e4eb;
+  z-index: 100;
+  height: 100vh;
+  background-image: url('../img/mainbg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+}
+#mainv h1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(60vw,420px);
+}
+
+.area-2 {
+  z-index: 200;
+  position: relative !important;
+  background-color: #e0e4eb;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: center;
+}
+.area-2 .inner {
+  width: min(92%, 1080px);
+  margin: 0 auto;
+  padding: 2em 0 3em;
+}
+.banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.area-3 {
+  background-color: #7383a1;
+  z-index: 300;
+  position: relative !important;
+}
+.area-3 .inner {
+  padding: 2em 0 3em;
+  margin: 0 auto;
+  width: min(92%, 1080px);
+}
+
+.area-3 ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items:stretch;
+  align-content:flex-start;
+  justify-content: space-between;
+  flex-direction:row;
+}
+.area-3 ul li {
+  flex-basis:  30%; 
+}
+@media screen and  (max-width:599px){
+  .area-3 ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:stretch;
+    align-content:flex-start;
+    justify-content: space-between;
+    flex-direction:row;
+  }
+  .area-3 ul li {
+    flex-basis:  47%; 
+  }
+}
+
+.visualBlock4 {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+img[id^="visualVerticalImg"]{
+  position: absolute;
+  top: -50px;
+  object-fit:cover;
+  object-position: center center;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+}
+img[id="visualVerticalImg1"]{
+  top: -100px !important;
+}
+
+.visualText.textAbsolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(245,245,245,1);
+  width: 90%;
+  text-align: center;
+}
+
+.area-4 {
+  background-color: #354d7b;
+  z-index: 400;
+}
+
+.area-5 {
+  background-color: #111934;
+  color: #e5e5e5;
+  z-index: 500;
+  position: relative;
+}
+.area-5 .inner {
+  padding: 2em 0 3em;
+  margin: 0 auto;
+  width: min(92%, 1080px);
+}
+
+.area-6 {
+  background-color: #ffffff;
+  color: #000000;
+  z-index: 500;
+  position: relative;
+}
+
+
+header,nav,button {display: contents;}
+html.overlayopen {overflow: hidden;}
+
+
+#overlay-button {
+	position: fixed;
+	left: 2em;
+	top: 3em;
+	padding: 26px 11px;
+	z-index: 9999;
+	cursor: pointer;
+	user-select: none;
+  }
+  #overlay-button span {
+	height: 4px;
+	width: 35px;
+	border-radius: 2px;
+	background-color: rgba(245,245,245,1);
+	position: relative;
+	display: block;
+	transition: all .2s ease-in-out;
+  }
+  #overlay-button span:before {
+	top: -10px;
+	visibility: visible;
+  }
+  #overlay-button span:after {
+	top: 10px;
+  }
+  #overlay-button span:before, #overlay-button span:after {
+	height: 4px;
+	width: 35px;
+	border-radius: 2px;
+	background-color: rgba(245,245,245,1);
+	position: absolute;
+	content: "";
+	transition: all .2s ease-in-out;
+	right: 0;
+  }
+  #overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
+	background: rgba(245,245,245,1);
+  }
+  
+
+  
+  input[type=checkbox]:checked ~ #overlay {
+	visibility: visible;
+	overflow-y: hidden; 
+  }
+  
+  #overlay-input.active #overlay-button:hover span, #overlay-input.active #overlay-button span {
+	background: transparent;
+	
+	
+  }
+  #overlay-input.active #overlay-button span:before {
+	transform: rotate(45deg) translate(7px, 7px);
+  
+  }
+  #overlay-input.active #overlay-button span:after {
+	transform: rotate(-45deg) translate(7px, -7px);
+  
+  
+  }
+  
+  #overlay {
+	height: 100vh;
+	height: -webkit-fill-available;
+	width: 100vw;
+	background: rgba(0,0,0,.9);
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	z-index: 9998;
+  }
+  #overlay.panelactive {
+	visibility: visible;
+  }
+  #overlay ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	height: -webkit-fill-available;
+	padding-left: 0;
+	list-style-type: none;
+  }
+  #overlay ul li {
+	padding: 1em;
+  }
+  #overlay ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.5em;
+  }
+  #overlay ul li a:hover {
+	color: #000!important;
+  }
+
+
+
+.mvOfficelogo__clm {
+    display: flex;
+    height: 75px;
+}
+.mvOfficelogo__img {
+    width: auto;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    height: 100%;
+    will-change: transform;
+}
+
+@keyframes logoLoop-01 {
+0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+}
+@keyframes logoLoop-02 {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+	100% {
+		-webkit-transform: translateX(-200%);
+		transform: translateX(-200%);
+	}
+}
+@keyframes logoLoop-03 {
+	0% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+	
+	100% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+}
+@keyframes logoLoop-04 {
+	0% {
+		-webkit-transform: translateX(-200%);
+		transform: translateX(-200%);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+.mvOfficelogo__img--01 {
+    -webkit-animation: 100s linear -50s infinite logoLoop-01;
+    animation: 100s linear -50s infinite logoLoop-01;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+}
+.mvOfficelogo__img--02 {
+    -webkit-animation: 100s linear infinite logoLoop-02;
+    animation: 100s linear infinite logoLoop-02;
+}
+.mvOfficelogo__img--03 {
+    -webkit-animation: 100s linear -50s infinite logoLoop-03;
+    animation: 100s linear -50s infinite logoLoop-03;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+}
+.mvOfficelogo__img--04 {
+    -webkit-animation: 100s linear infinite logoLoop-04;
+    animation: 100s linear infinite logoLoop-04;
+}
